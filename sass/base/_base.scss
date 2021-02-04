@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /** Inherits the value of the body style */
+  box-sizing: inherit;
+}
+
+html {
+  /** Covert all the font-size to rem - responsive
+      - Calculated the html font size based on default browser font-size of 16px - which can be changed by the user
+      - Defines how much percentage for 1 rem (10px is 1rem)
+  */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
