@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Following meta viewport tag is important for responsiveness-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
@@ -9,9 +10,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/icon-font.css" />
-    <link rel="stylesheet" href="css/icon-font.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!--     <link rel="stylesheet" href="css/icon-font.css" /> -->
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <title>Natours | Exciting tours for adventurous people</title>
@@ -97,6 +97,29 @@
           </div>
           <div class="col-1-of-2 composition">
             <img
+              srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+              src="img/nat-1-large.jpg"
+              sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+              alt="Photo 1"
+              class="composition__photo composition__photo--p1"
+            />
+            <img
+              srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+              src="img/nat-2-large.jpg"
+              sizes="(max-width: 900px) 20vw,
+          (max-width: 600px) 30vw, 300px"
+              alt="Photo 2"
+              class="composition__photo composition__photo--p2"
+            />
+            <img
+              srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+              src="img/nat-3-large.jpg"
+              sizes="(max-width: 900px) 20vw,
+            (max-width: 600px) 30vw, 300px"
+              alt="Photo 3"
+              class="composition__photo composition__photo--p3"
+            />
+            <!-- <img
               src="img/nat-1-large.jpg"
               alt="Photo 1"
               class="composition__photo composition__photo--p1"
@@ -110,7 +133,7 @@
               src="img/nat-3-large.jpg"
               alt="Photo 3"
               class="composition__photo composition__photo--p3"
-            />
+            /> -->
           </div>
         </div>
       </section>
@@ -403,7 +426,21 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="Full Logo" class="footer__logo" />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            src="img/logo-green-2x.png 2x"
+            alt="Full Logo"
+            class="footer__logo"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-1-of-2">
